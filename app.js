@@ -2,6 +2,11 @@
 var express = require("express");
 var app = express();
 
+var path = require("path");
+
+// import router file here
+var canditateRouter = require("./routes/candidateRouter.js");
+
 // Load path
 var path = require("path");
 var bodyParser = require("body-parser");
@@ -22,17 +27,9 @@ app.get("/", (req, res) => {
   res.render("pages/index", { load_view: "middle-home" });
 });
 
-// Show signup page
-app.get("/signup", (req, res) => {
-  res.render("pages/index", { load_view: "signup" });
-});
-
-// Signup process
-app.post("/signupProcess", (req, res) => {
-  var obj = {
-    users: [],
-  };
-});
+// Signup router
+app.get("/signup", canditateRouter);
+app.post("/signupProcess", canditateRouter);
 
 app.listen(port, () => {
   console.log("Profile Management Connecting..3400");
