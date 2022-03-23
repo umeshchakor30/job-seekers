@@ -29,7 +29,6 @@ app.use("/public", express.static(path.resolve(__dirname, "public")));
 //Company registration
 app.post("/companyregistration", companyRouter);
 
-
 // default index page
 app.get("/", (req, res) => {
   res.render("pages/index", { load_view: "middle-home" });
@@ -38,7 +37,7 @@ app.get("/", (req, res) => {
 // candidate Signup router
 app.get("/signup", canditateRouter);
 app.post("/signupProcess", canditateRouter);
-
+app.get("/thankyou", canditateRouter);
 
 app.listen(port, () => {
   console.log("Profile Management Connecting..3400");
