@@ -27,7 +27,7 @@ const signup = (req, res) => {
             if (err) {
               console.log("Error in insert" + err);
             } else {
-              res.redirect("/thankyou");
+                res.redirect("/thanks");
             }
           });
         }
