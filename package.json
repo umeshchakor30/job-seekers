@@ -9,6 +9,7 @@
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "express-validation": "^3.0.8",
     "mongodb": "^4.4.1",
     "pug": "^3.0.2"
   }
