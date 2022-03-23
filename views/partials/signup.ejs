@@ -46,22 +46,25 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane fade in active" id="company">
-                    <form>
+                    <form action="/companyregistration" name="frm_company_registration" id="frm_company_registration" method="POST">
                       <div class="mj_createaccount_form">
                         <div class="form-group">
-                          <input type="text" placeholder="Name" id="ur_name" class="form-control">
+                          <input type="text" placeholder="Name" id="company_first_name" name="company_first_name" class="form-control">
                         </div>
                         <div class="form-group">
-                          <input type="text" placeholder="Surname" id="ur_surname" class="form-control">
+                          <input type="text" placeholder="Surname" id="company_last_name" name="company_last_name" class="form-control">
                         </div>
                         <div class="form-group">
-                          <input type="text" placeholder="Company Name" id="ur_username" class="form-control">
+                          <input type="text" placeholder="Company Name" id="company_name" name="company_name" class="form-control">
                         </div>
                         <div class="form-group">
-                          <input type="email" placeholder="Email Address" id="ur_email" class="form-control">
+                          <input type="email" placeholder="Email Address" id="company_email" name="company_email" class="form-control">
                         </div>
                         <div class="form-group">
-                          <input type="password" placeholder="Password" id="ur_password" class="form-control">
+                          <input type="text" placeholder="Username" id="company_username" name="company_username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" placeholder="Password" id="company_password" name="company_password" class="form-control">
                         </div>
                         <div class="form-group mj_toppadder20">
                           <div class="mj_checkbox">
@@ -70,32 +73,7 @@
                           </div>
                           <span> I have read, understand and agree to the meshjobs Terms of Service, including the <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>.</span> </div>
                       </div>
-                      <div class="mj_pricing_footer"> <a href="#">Get Started Now!</a> </div>
-                    </form>
-                  </div>
-                  <div role="tabpanel" class="tab-pane fade" id="individual">
-                    <form>
-                      <div class="mj_createaccount_form">
-                        <div class="form-group">
-                          <input type="text" placeholder="Name" id="urname" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <input type="text" placeholder="Surname" id="ursurname" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <input type="email" placeholder="Email Address" id="uremail" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <input type="password" placeholder="Password" id="urpassword" class="form-control">
-                        </div>
-                        <div class="form-group mj_toppadder20">
-                          <div class="mj_checkbox">
-                            <input type="checkbox" value="1" id="check2" name="checkbox">
-                            <label for="check2"></label>
-                          </div>
-                          <span> I have read, understand and agree to the meshjobs Terms of Service, including the <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>.</span> </div>
-                      </div>
-                      <div class="mj_pricing_footer"> <a href="#">Get Started Now!</a> </div>
+                      <div class="mj_pricing_footer"> <a href="javascript:void(0);" onclick="CompanyRegistration()">Get Started Now!</a> </div>
                     </form>
                   </div>
                 </div>
@@ -222,4 +200,30 @@
             }
         })
    }   
+   const CompanyRegistration=()=>{
+    var first_name = document.getElementById("company_first_name").value;
+        var last_name = document.getElementById("company_last_name").value;
+        var company_name = document.getElementById("company_name").value;
+        var user_email = document.getElementById("company_email").value;
+        var username = document.getElementById("company_username").value;
+        var password = document.getElementById("company_password").value;
+
+        fetch("/companyregistration",{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({first_name:first_name,last_name:last_name,user_email:user_email,username:username,password:password})
+            })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.message=="ERROR"){
+            //document.getElementById("message").innerHTML=data.msgtype;
+            }
+            
+            if(data.message=="SUCCESS"){
+            
+            }
+        })
+   }
   </script>
