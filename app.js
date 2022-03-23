@@ -17,6 +17,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/public", express.static(path.resolve(__dirname, "public")));
 
+//Import the routers file
+var company= require('./companyRouter');
+app.use('/company',company);
+
+
 // default index page
 app.get("/", (req, res) => {
   res.render("pages/index", { load_view: "middle-home" });
