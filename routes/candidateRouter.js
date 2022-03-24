@@ -7,12 +7,11 @@ const {
   signupProcess,
   thankyou,
   login,
+  loginProcess,
 } = require("../controllers/candidate.js");
 
 // Show signup page
 router.get("/signup", signup);
-
-// Sign up process
 router.post("/signupProcess", signupProcess);
 
 // For thank you page
@@ -20,5 +19,6 @@ router.get("/thankyou", thankyou);
 
 //For login page
 router.get("/login", login);
+router.post("/loginProcess", loginProcess);
 
 module.exports = router;

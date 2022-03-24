@@ -22,7 +22,7 @@ const login = () => {
     document.getElementById("login_password").focus();
     return false;
   } else {
-    fetch("/login", {
+    fetch("/loginProcess", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
