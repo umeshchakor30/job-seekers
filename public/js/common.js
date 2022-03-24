@@ -2,9 +2,11 @@
 const login = () => {
   var login_email = document.getElementById("login_user").value;
   var login_password = document.getElementById("login_password").value;
+  var option = document.getElementsByName("login_type");
 
   document.getElementById("err_login_user").innerHTML = "";
   document.getElementById("err_login_password").innerHTML = "";
+  document.getElementById("err_login_type").innerHTML = "";
   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
   if (login_email.length == 0) {
@@ -20,6 +22,10 @@ const login = () => {
     document.getElementById("err_login_password").innerHTML =
       "Please enter a password";
     document.getElementById("login_password").focus();
+    return false;
+  } else if (!(option[0].checked || option[1].checked)) {
+    document.getElementById("err_login_type").innerHTML =
+      "Please select a login type";
     return false;
   } else {
     fetch("/loginProcess", {
