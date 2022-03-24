@@ -29,12 +29,6 @@ app.use("/public", express.static(path.resolve(__dirname, "public")));
 //Company registration
 app.post("/companyregistration", companyRouter);
 
-<<<<<<< HEAD
-=======
-app.get("/thanks", (req,res)=>{
- res.send("DOne");
-});
->>>>>>> 4b138ed3d2dcb59dfe447ad785cf26ad0ce9812c
 // default index page
 app.get("/", (req, res) => {
   res.render("pages/index", { load_view: "middle-home" });
