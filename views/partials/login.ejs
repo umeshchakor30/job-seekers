@@ -11,13 +11,15 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 col-sm-12 col-xs-12">
                 <div class="mj_pricingtable mj_greentable mj_login_form_wrapper">
-                    <form>
+                    <form method="post">
                         <div class="mj_login_form">
                             <div class="form-group">
-                                <input type="text" placeholder="Username or Email" id="uname" class="form-control">
+                                <input type="text" placeholder="Email" id="login_user" name="login_user" class="form-control">
+                                <div id="err_login_user" class="cls_error"></div>
                             </div>
                             <div class="form-group">
-                                <input type="password" placeholder="Your Password" id="upassword" class="form-control">
+                                <input type="password" placeholder="Your Password" id="login_password" name="login_password" class="form-control">
+                                <div id="err_login_password" class="cls_error"></div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mj_toppadder20">
@@ -37,7 +39,7 @@
                             </div>
                         </div>
                         <div class="mj_pricing_footer">
-                            <a href="#">login Now</a>
+                            <a href="javascript:void(0);" onClick="login();">login Now</a>
                         </div>
                     </form>
                 </div>
