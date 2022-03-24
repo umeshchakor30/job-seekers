@@ -7,6 +7,7 @@ const login = () => {
   document.getElementById("err_login_user").innerHTML = "";
   document.getElementById("err_login_password").innerHTML = "";
   document.getElementById("err_login_type").innerHTML = "";
+  document.getElementById("err_msg").style.display = "none";
   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
   if (login_email.length == 0) {
@@ -28,6 +29,9 @@ const login = () => {
       "Please select a login type";
     return false;
   } else {
+    var selected_option = document.querySelector(
+      'input[name="login_type"]:checked'
+    ).value;
     fetch("/loginProcess", {
       method: "POST",
       headers: {
@@ -36,16 +40,23 @@ const login = () => {
       body: JSON.stringify({
         login_email: login_email,
         login_password: login_password,
+        option: selected_option,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.message == "ERROR") {
-          //document.getElementById("message").innerHTML=data.msgtype;
+        if (data.message === "ERROR") {
+          document.getElementById("err_msg").style.display = "block";
+          document.getElementById("err_msg").innerHTML =
+            "Email id and password not matched";
+          document.getElementById("login_user").value = "";
+          document.getElementById("login_password").value = "";
         }
 
-        if (data.message == "SUCCESS") {
-          location.href = "/thankyou";
+        if (data.message === "SUCCESS") {
+          if (data.type === "candidate") {
+            location.href = "/candidate-dashboard";
+          }
         }
       });
   }
