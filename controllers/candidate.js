@@ -1,6 +1,7 @@
 // Mongo DB
 var MongoClient = require("mongodb").MongoClient;
-var dbhost = "mongodb+srv://joobseekersnew.kngut.mongodb.net/";
+var dbhost =
+  "mongodb+srv://joobseekersnew:joobseekersnew@joobseekersnew.kngut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 // Show signup page
 const signup = (req, res) => {
@@ -9,6 +10,7 @@ const signup = (req, res) => {
 
 // Show signup process
 const signupProcess = (req, res) => {
+  console.log(req);
   const newCandidate = {
     first_name: req.body.first_name,
     last_name: req.body.last_name,
@@ -26,14 +28,19 @@ const signupProcess = (req, res) => {
         if (err) {
           console.log("Error in insert" + err);
         } else {
-          res.redirect("/thankyou");
+          //return res.redirect("/thankyou");
         }
       });
     }
   });
 };
 
+const thankyou = (req, res) => {
+  res.render("pages/index", { load_view: "thankyou" });
+};
+
 module.exports = {
   signup,
   signupProcess,
+  thankyou,
 };
