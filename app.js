@@ -38,6 +38,7 @@ app.get("/", (req, res) => {
 app.get("/signup", canditateRouter);
 app.post("/signupProcess", canditateRouter);
 app.get("/thankyou", canditateRouter);
+app.get("/login", canditateRouter);
 
 app.listen(port, () => {
   console.log("Profile Management Connecting..3400");

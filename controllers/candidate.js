@@ -35,6 +35,12 @@ const signupProcess = (req, res) => {
   });
 };
 
+// For login page
+const login = (req, res) => {
+  res.render("pages/index", { load_view: "login" });
+};
+
+// For Thank you page
 const thankyou = (req, res) => {
   res.render("pages/index", { load_view: "thankyou" });
 };
@@ -43,4 +49,5 @@ module.exports = {
   signup,
   signupProcess,
   thankyou,
+  login,
 };
