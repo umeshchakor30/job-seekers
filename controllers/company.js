@@ -6,15 +6,14 @@ const signup = (req, res) => {
     console.log("In candidate .js");
     res.send("Signup");
   };
-  
-  // Show signup process
+    // Show signup process
   const signupCompanyProcess = (req, res) => {
-    
-    const newCompany = {
+      const newCompany = {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         user_email: req.body.user_email,
-        username: req.body.username,
+        company_name: req.body.company_name,
+       // username: req.body.username,
         password: req.body.password,
       };
       MongoClient.connect(dbhost, function (err, connection) {
@@ -34,9 +33,15 @@ const signup = (req, res) => {
       });
 
   };
+
+  const companyEditprocess=(req,res)=>{
+    res.render("pages/index", { load_view: "edit-company" });
+  };
+ 
   
   module.exports = {
     signup,
     signupCompanyProcess,
+    companyEditprocess,
   };
   
