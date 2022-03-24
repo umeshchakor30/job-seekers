@@ -61,3 +61,36 @@ const login = () => {
       });
   }
 };
+
+// Sign up
+const signUp = () => {
+  var first_name = document.getElementById("first_name").value;
+  var last_name = document.getElementById("last_name").value;
+  var user_email = document.getElementById("user_email").value;
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  fetch("/signupProcess", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      first_name: first_name,
+      last_name: last_name,
+      user_email: user_email,
+      username: username,
+      password: password,
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.message == "ERROR") {
+        //document.getElementById("message").innerHTML=data.msgtype;
+      }
+
+      if (data.message == "SUCCESS") {
+        location.href = "/thankyou";
+      }
+    });
+};
