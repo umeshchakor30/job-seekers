@@ -26,13 +26,12 @@ app.use(bodyParser.json());
 app.use("/public", express.static(path.resolve(__dirname, "public")));
 
 
-
-
-
 //Company router
 app.post("/companyregistration", companyRouter); //Company registration
+
 app.get("/companyedit",companyRouter);//company profile edit
 app.post("/companyupdate",companyRouter);//company profile Update
+app.get("/companyedit", companyRouter); //company profile edit
 
 
 // default index page
