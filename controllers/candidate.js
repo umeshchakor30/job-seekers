@@ -1,7 +1,12 @@
 // Mongo DB
 var MongoClient = require("mongodb").MongoClient;
-var dbhost =
-  "mongodb+srv://joobseekersnew:joobseekersnew@joobseekersnew.kngut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+/*var dbhost =
+  "mongodb+srv://joobseekersnew:joobseekersnew@joobseekersnew.kngut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";*/
+
+// env file
+require("dotenv").config();
+var dbhost = process.env.MONGO_CONNECT_STRING;
 
 var cookieParser = require("cookie-parser");
 var jwt = require("jsonwebtoken");
