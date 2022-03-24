@@ -45,6 +45,7 @@
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
+                  
                   <div role="tabpanel" class="tab-pane fade in active" id="company">
                     <form action="/companyregistration" name="frm_company_registration" id="frm_company_registration" method="POST">
                       <div class="mj_createaccount_form">
@@ -213,11 +214,10 @@
         .then(res=>res.json())
         .then(data=>{
             if(data.message=="ERROR"){
-            //document.getElementById("message").innerHTML=data.msgtype;
+            document.getElementById("message").innerHTML=data.msgtype;
             }
-            
             if(data.message=="SUCCESS"){
-              
+              location.href = "/thankyou";
             }
         })
    }
