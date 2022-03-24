@@ -26,9 +26,9 @@ const signupProcess = (req, res) => {
       db.collection("candidate").insertOne(newCandidate, function (err, data) {
         connection.close(); // close connection here
         if (err) {
-          console.log("Error in insert" + err);
+          res.json({ message: "ERROR" });
         } else {
-          //return res.redirect("/thankyou");
+          res.json({ message: "SUCCESS" });
         }
       });
     }
