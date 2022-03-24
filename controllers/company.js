@@ -25,9 +25,9 @@ const signup = (req, res) => {
           db.collection("company").insertOne(newCompany, function (err, data) {
             connection.close(); // close connection here
             if (err) {
-              console.log("Error in insert" + err);
+              res.json({message:"ERROR",err:err});
             } else {
-                res.redirect("/thanks");
+                res.json({message:"SUCCESS"});
             }
           });
         }
