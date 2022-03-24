@@ -45,7 +45,7 @@
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  
+
                   <div role="tabpanel" class="tab-pane fade in active" id="company">
                     <form action="/companyregistration" name="frm_company_registration" id="frm_company_registration" method="POST">
                       <div class="mj_createaccount_form">
@@ -61,7 +61,7 @@
                         <div class="form-group">
                           <input type="email" placeholder="Email Address" id="company_email" name="company_email" class="form-control">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" style="display: none;">
                           <input type="text" placeholder="Username" id="company_username" name="company_username" class="form-control">
                         </div>
                         <div class="form-group">
@@ -196,12 +196,13 @@
             }
         })
    }   
+   /*Company Registration Function*/
    const CompanyRegistration=()=>{
     var first_name = document.getElementById("company_first_name").value;
         var last_name = document.getElementById("company_last_name").value;
         var company_name = document.getElementById("company_name").value;
         var user_email = document.getElementById("company_email").value;
-        var username = document.getElementById("company_username").value;
+      //  var username = document.getElementById("company_username").value;
         var password = document.getElementById("company_password").value;
 
         fetch("/companyregistration",{
@@ -209,7 +210,7 @@
             headers:{
                 "Content-Type":"application/json"
             },
-            body:JSON.stringify({first_name:first_name,last_name:last_name,user_email:user_email,username:username,password:password})
+            body:JSON.stringify({first_name:first_name,last_name:last_name,user_email:user_email,company_name:company_name,password:password})
             })
         .then(res=>res.json())
         .then(data=>{
