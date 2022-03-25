@@ -1,201 +1,392 @@
 <div class="mj_transprentbg">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <div class="row">
-            <div class="mj_signup_section mj_yellow_bg">
-              <div class="mj_mainheading mj_toppadder80 mj_bottompadder30">
-                <h1>I<span>'m</span> <span>employer look-ing to hire</span></h1>
-              </div>
-              <div class="mj_blog_btn"> <a href="#" class="mj_mainbtn mj_btnblack" data-text="hire" data-toggle="modal" data-target="#myModal"><span>hire</span></a> </div>
-              <div class="mj_signup_section_img"> <img src="public/images/signup_bg1.png" class="img-responsive" alt="hire"> </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="mj_signup_section mj_yellow_bg">
+            <div class="mj_mainheading mj_toppadder80 mj_bottompadder30">
+              <h1>I<span>'m</span> <span>employer look-ing to hire</span></h1>
+            </div>
+            <div class="mj_blog_btn">
+              <a
+                href="#"
+                class="mj_mainbtn mj_btnblack"
+                data-text="hire"
+                data-toggle="modal"
+                data-target="#myModal"
+                ><span>hire</span></a
+              >
+            </div>
+            <div class="mj_signup_section_img">
+              <img
+                src="public/images/signup_bg1.png"
+                class="img-responsive"
+                alt="hire"
+              />
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <div class="row">
-            <div class="mj_signup_section mj_blue_bg">
-              <div class="mj_mainheading mj_toppadder80 mj_bottompadder30">
-                <h1>I<span>'m</span> <span>candidate looking for a job</span></h1>
-              </div>
-              <div class="mj_blog_btn"> <a href="#" class="mj_mainbtn mj_btnblack" data-text="work" data-toggle="modal" data-target="#myModal1"><span>work</span></a> </div>
-              <div class="mj_signup_section_img"> <img src="public/images/signup_bg2.png" class="img-responsive" alt="job"> </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="mj_signup_section mj_blue_bg">
+            <div class="mj_mainheading mj_toppadder80 mj_bottompadder30">
+              <h1>I<span>'m</span> <span>candidate looking for a job</span></h1>
+            </div>
+            <div class="mj_blog_btn">
+              <a
+                href="#"
+                class="mj_mainbtn mj_btnblack"
+                data-text="work"
+                data-toggle="modal"
+                data-target="#myModal1"
+                ><span>work</span></a
+              >
+            </div>
+            <div class="mj_signup_section_img">
+              <img
+                src="public/images/signup_bg2.png"
+                class="img-responsive"
+                alt="job"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade mj_popupdesign" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel"> c<span>ompany</span> A<span>ccount</span></h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-        </div>
-        <div class="modal-body">
-          <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
-            <div class="row">
-              <div class="mj_pricingtable mj_yellowtable mj_createaccount_form_wrapper"> 
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                  <li role="presentation"><a href="#">Company Registration</a> </li>
-                  
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-
-                  <div role="tabpanel" class="tab-pane fade in active" id="company">
-                    <form action="/companyregistration" name="frm_company_registration" id="frm_company_registration" method="POST">
-                      <div class="mj_createaccount_form">
-                        <div class="form-group">
-                          <input type="text" placeholder="Name" id="company_first_name" name="company_first_name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <input type="text" placeholder="Surname" id="company_last_name" name="company_last_name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <input type="text" placeholder="Company Name" id="company_name" name="company_name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <input type="email" placeholder="Email Address" id="company_email" name="company_email" class="form-control">
-                        </div>
-                        <div class="form-group" style="display: none;">
-                          <input type="text" placeholder="Username" id="company_username" name="company_username" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <input type="password" placeholder="Password" id="company_password" name="company_password" class="form-control">
-                        </div>
-                        
+</div>
+<!-- Modal -->
+<div
+  class="modal fade mj_popupdesign"
+  id="myModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">
+          c<span>ompany</span> A<span>ccount</span>
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.
+        </p>
+      </div>
+      <div class="modal-body">
+        <div
+          class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1"
+        >
+          <div class="row">
+            <div
+              class="mj_pricingtable mj_yellowtable mj_createaccount_form_wrapper"
+            >
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation">
+                  <a href="#">Company Registration</a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div
+                  role="tabpanel"
+                  class="tab-pane fade in active"
+                  id="company"
+                >
+                  <form
+                    action="/companyregistration"
+                    name="frm_company_registration"
+                    id="frm_company_registration"
+                    method="POST"
+                  >
+                    <div class="mj_createaccount_form">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          placeholder="Name"
+                          id="company_first_name"
+                          name="company_first_name"
+                          class="form-control"
+                        />
+                        <div
+                          id="err_company_first_name"
+                          class="cls_error"
+                        ></div>
                       </div>
-                      <div class="mj_pricing_footer"> <a href="javascript:void(0);" onclick="CompanyRegistration()">Get Started Now!</a> </div>
-                    </form>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          placeholder="Surname"
+                          id="company_last_name"
+                          name="company_last_name"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          placeholder="Company Name"
+                          id="company_name"
+                          name="company_name"
+                          class="form-control"
+                        />
+                        <div id="err_company_name" class="cls_error"></div>
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          placeholder="Email Address"
+                          id="company_email"
+                          name="company_email"
+                          class="form-control"
+                        />
+                        <div id="err_company_email" class="cls_error"></div>
+                      </div>
+                      <div class="form-group" style="display: none">
+                        <input
+                          type="text"
+                          placeholder="Username"
+                          id="company_username"
+                          name="company_username"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="password"
+                          placeholder="Password"
+                          id="company_password"
+                          name="company_password"
+                          class="form-control"
+                        />
+                        <div id="err_company_password" class="cls_error"></div>
+                      </div>
+                    </div>
+                    <div class="mj_pricing_footer">
+                      <a
+                        href="javascript:void(0);"
+                        onclick="CompanyRegistration()"
+                        >Get Started Now!</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="images/close.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade mj_popupdesign"
+  id="myModal1"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel1"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel1">
+          C<span>andidate</span> A<span>ccount</span>
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.
+        </p>
+      </div>
+      <div class="modal-body">
+        <div
+          class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1"
+        >
+          <div class="row">
+            <div
+              class="mj_pricingtable mj_bluetable mj_freelancer_form_wrapper"
+            >
+              <p class="mj_toppadder40">
+                You can also sign up with <a href="#">Facebook</a>,
+                <a href="#">Linkedin</a>, or <a href="#">Google</a>.
+              </p>
+              <form action="/signup">
+                <div class="mj_freelancer_form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      id="first_name"
+                      name="first_name"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Surname"
+                      id="last_name"
+                      name="last_name"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      id="user_email"
+                      name="user_email"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Username"
+                      id="username"
+                      name="username"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      id="password"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group mj_toppadder20">
+                    <div class="mj_checkbox">
+                      <input
+                        type="checkbox"
+                        value="1"
+                        id="check3"
+                        name="checkbox"
+                      />
+                      <label for="check3"></label>
+                    </div>
+                    <span>
+                      I have read, understand and agree to the meshjobs Terms of
+                      Service, including the <a href="#">User Agreement</a> and
+                      <a href="#">Privacy Policy</a>.</span
+                    >
                   </div>
                 </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="images/close.png" alt=""> </button>
-              </div>
+                <div class="mj_pricing_footer">
+                  <a href="javascript:void(0);" onClick="signUp()">Sign Up!</a>
+                </div>
+              </form>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="public/images/close.png" alt="" />
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="modal fade mj_popupdesign" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel1"> C<span>andidate</span> A<span>ccount</span></h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-        </div>
-        <div class="modal-body">
-          <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
-            <div class="row">
-              <div class="mj_pricingtable mj_bluetable mj_freelancer_form_wrapper">
-                <p class="mj_toppadder40">You can also sign up with <a href="#">Facebook</a>, <a href="#">Linkedin</a>, or <a href="#">Google</a>.</p>
-                <form action="/signup">
-                  <div class="mj_freelancer_form">
-                    <div class="form-group">
-                      <input type="text" placeholder="Name" id="first_name" name="first_name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" placeholder="Surname" id="last_name" name="last_name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="email" placeholder="Email" id="user_email" name="user_email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" placeholder="Username" id="username" name="username" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" placeholder="Password" id="password" class="form-control">
-                    </div>
-                    <div class="form-group mj_toppadder20">
-                      <div class="mj_checkbox">
-                        <input type="checkbox" value="1" id="check3" name="checkbox">
-                        <label for="check3"></label>
-                      </div>
-                      <span> I have read, understand and agree to the meshjobs Terms of Service, including the <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>.</span> </div>
+</div>
+<div
+  class="modal fade mj_popupdesign"
+  id="myModal2"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel2"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel2">
+          l<span>ogin to my </span> A<span>ccount</span>
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.
+        </p>
+      </div>
+      <div class="modal-body">
+        <div
+          class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1"
+        >
+          <div class="row">
+            <div class="mj_pricingtable mj_greentable mj_login_form_wrapper">
+              <form>
+                <div class="mj_login_form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Username or Email"
+                      id="usr_name"
+                      class="form-control"
+                    />
                   </div>
-                  <div class="mj_pricing_footer"> <a href="javascript:void(0);" onClick="signUp()">Sign Up!</a> </div>
-                </form>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="public/images/close.png" alt=""> </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade mj_popupdesign" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel2"> l<span>ogin to my </span> A<span>ccount</span></h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-        </div>
-        <div class="modal-body">
-          <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
-            <div class="row">
-              <div class="mj_pricingtable mj_greentable mj_login_form_wrapper">
-                <form>
-                  <div class="mj_login_form">
-                    <div class="form-group">
-                      <input type="text" placeholder="Username or Email" id="usr_name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" placeholder="Your Password" id="usr_password" class="form-control">
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mj_toppadder20">
-                        <div class="form-group  pull-left">
-                          <div class="mj_checkbox">
-                            <input type="checkbox" value="1" id="check4" name="checkbox">
-                            <label for="check4"></label>
-                          </div>
-                          <span> remember me</span> </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      placeholder="Your Password"
+                      id="usr_password"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mj_toppadder20"
+                    >
+                      <div class="form-group pull-left">
+                        <div class="mj_checkbox">
+                          <input
+                            type="checkbox"
+                            value="1"
+                            id="check4"
+                            name="checkbox"
+                          />
+                          <label for="check4"></label>
+                        </div>
+                        <span> remember me</span>
                       </div>
-                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mj_toppadder20">
-                        <div class="form-group pull-right"> <span><a href="#">forget password ?</a></span> </div>
+                    </div>
+                    <div
+                      class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mj_toppadder20"
+                    >
+                      <div class="form-group pull-right">
+                        <span><a href="#">forget password ?</a></span>
                       </div>
                     </div>
                   </div>
-                  <div class="mj_pricing_footer"> <a href="#">login Now</a> </div>
-                </form>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="images/close.png" alt=""> </button>
-              </div>
+                </div>
+                <div class="mj_pricing_footer"><a href="#">login Now</a></div>
+              </form>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="images/close.png" alt="" />
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script>
-     
-   /*Company Registration Function*/
-   const CompanyRegistration=()=>{
-    var first_name = document.getElementById("company_first_name").value;
-        var last_name = document.getElementById("company_last_name").value;
-        var company_name = document.getElementById("company_name").value;
-        var user_email = document.getElementById("company_email").value;
-      //  var username = document.getElementById("company_username").value;
-        var password = document.getElementById("company_password").value;
-
-        fetch("/companyregistration",{
-            method:'POST',
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({first_name:first_name,last_name:last_name,user_email:user_email,company_name:company_name,password:password})
-            })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.message=="ERROR"){
-            document.getElementById("message").innerHTML=data.msgtype;
-            }
-            if(data.message=="SUCCESS"){
-              location.href = "/thankyou";
-            }
-        })
-   }
-  </script>
+</div>
