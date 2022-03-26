@@ -136,3 +136,70 @@ const signUp = () => {
       });
   }
 };
+/*Company Registration Function*/
+const CompanyRegistration = () => {
+  var first_name = document.getElementById("company_first_name").value;
+  var last_name = document.getElementById("company_last_name").value;
+  var company_name = document.getElementById("company_name").value;
+  var user_email = document.getElementById("company_email").value;
+  //  var username = document.getElementById("company_username").value;
+  var password = document.getElementById("company_password").value;
+
+  document.getElementById("err_company_first_name").innerHTML = "";
+  document.getElementById("err_company_email").innerHTML = "";
+  document.getElementById("err_company_password").innerHTML = "";
+  document.getElementById("err_company_name").innerHTML = "";
+
+  //document.getElementById("err_msg").style.display = "none";
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+  if (first_name.length == 0) {
+    document.getElementById("err_company_first_name").innerHTML =
+      "Please enter a first name";
+    document.getElementById("company_first_name").focus();
+    return false;
+  } else if (company_name.length == 0) {
+    document.getElementById("err_company_name").innerHTML =
+      "Please enter a company name";
+    document.getElementById("company_name").focus();
+    return false;
+  } else if (user_email.length == 0) {
+    document.getElementById("err_company_email").innerHTML =
+      "Please enter a email id";
+    document.getElementById("company_email").focus();
+    return false;
+  } else if (reg.test(user_email) == false) {
+    document.getElementById("err_company_email").innerHTML =
+      "Please enter a valid email id";
+    document.getElementById("company_email").focus();
+    return false;
+  } else if (password.length == 0) {
+    document.getElementById("err_company_password").innerHTML =
+      "Please enter a password";
+    document.getElementById("company_password").focus();
+    return false;
+  } else {
+    fetch("/companyregistration", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        first_name: first_name,
+        last_name: last_name,
+        user_email: user_email,
+        company_name: company_name,
+        password: password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message == "ERROR") {
+          document.getElementById("message").innerHTML = data.msgtype;
+        }
+        if (data.message == "SUCCESS") {
+          location.href = "/thankyou";
+        }
+      });
+  }
+};
